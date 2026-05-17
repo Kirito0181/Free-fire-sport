@@ -1,0 +1,278 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+}
+
+/* MENÚ */
+/* HEADER */
+header{
+    background: black;
+    border-bottom: 2px solid red;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* NAVBAR */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+/* LOGO */
+.logo h1{
+    color: red;
+    font-size: 40px;
+    text-shadow: 0 0 15px red;
+}
+
+/* MENÚ */
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: red;
+}
+
+/* HERO */
+.hero{
+    text-align: center;
+    padding: 150px 20px;
+    background: linear-gradient(
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200');
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h2{
+    font-size: 55px;
+    color: red;
+    text-shadow: 0 0 20px red;
+    margin-bottom: 20px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero p{
+    margin: 20px auto;
+    width: 70%;
+    font-size: 22px;
+    color: #ddd;
+}
+
+.hero button{
+    padding: 15px 40px;
+    background: red;
+    border: none;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.hero .btn{
+    display: inline-block;
+    padding: 15px 40px;
+    background: red;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero .btn:hover{
+    transform: scale(1.1);
+    background: darkred;
+}
+
+.hero button:hover{
+    transform: scale(1.1);
+    background: darkred;
+}
+
+.hero button:hover{
+    background: darkred;
+}
+
+/* SECCIONES */
+section{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2{
+    color: red;
+    margin-bottom: 30px;
+}
+
+/* TARJETAS */
+.contenedor-torneos,
+.juegos{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.card{
+    background: #1a1a1a;
+    padding: 35px;
+    border-radius: 20px;
+    width: 250px;
+    border: 1px solid #333;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(255,0,0,0.2);
+}
+
+.card{
+    background: #1a1a1a;
+    padding: 35px;
+    border-radius: 20px;
+    width: 250px;
+    border: 1px solid #333;
+    transition: 0.4s ease;
+    box-shadow: 0 0 10px rgba(255,0,0,0.2);
+}
+
+.card:hover{
+    transform: translateY(-10px) scale(1.05);
+    border: 1px solid red;
+    box-shadow: 0 0 25px red;
+}
+
+/* FORMULARIO */
+form{
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+select{
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+form button{
+    background: red;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+form button:hover{
+    background: darkred;
+}
+
+/* FOOTER */
+footer{
+    background: #111;
+    padding: 40px;
+    border-top: 2px solid red;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer h3{
+    color: red;
+    font-size: 30px;
+    text-shadow: 0 0 10px red;
+}
+
+footer p{
+    color: #ddd;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.juego-card{
+    width: 250px;
+    height: 280px;
+    overflow: hidden;
+    text-align: center;
+    padding: 0;
+    transition: 0.4s ease;
+}
+
+.juego-card:hover{
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 25px red;
+    border: 1px solid red;
+}
+
+.juego-card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.juego-card h3{
+    padding: 15px;
+    color: white;
+    font-size: 22px;
+}
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contenedor-torneos,
+    .juegos{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 90%;
+    }
+
+    h1{
+        font-size: 45px;
+    }
+
+    form{
+        width: 90%;
+    }
+}
